@@ -4,19 +4,17 @@ import BpmnViewer from 'bpmn-js/lib/Viewer';
 import {
   BpmnPropertiesPanelModule,
   BpmnPropertiesProviderModule,
-  // @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module 'bpmn... RemoFve this comment to see the full error message
 } from 'bpmn-js-properties-panel';
+import TokenSimulationModelerModule from 'bpmn-js-token-simulation';
+import TokenSimulationViewerModule from 'bpmn-js-token-simulation/lib/viewer';
 
-// @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module 'dmn-... Remove this comment to see the full error message
 import DmnModeler from 'dmn-js/lib/Modeler';
 import {
   DmnPropertiesPanelModule,
   DmnPropertiesProviderModule,
-  // @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module 'dmn-... Remove this comment to see the full error message
 } from 'dmn-js-properties-panel';
 
 import React, { useRef, useEffect, useState } from 'react';
-// @ts-ignore
 import { Button, ButtonSet, Modal, UnorderedList, Link } from '@carbon/react';
 
 import 'bpmn-js/dist/assets/diagram-js.css';
@@ -34,21 +32,16 @@ import 'dmn-js/dist/assets/dmn-js-shared.css';
 import 'dmn-js/dist/assets/dmn-font/css/dmn-embedded.css';
 import 'dmn-js-properties-panel/dist/assets/properties-panel.css';
 
-// @ts-expect-error TS(7016) FIXME
 import spiffworkflow from 'bpmn-js-spiffworkflow/app/spiffworkflow';
 import 'bpmn-js-spiffworkflow/app/css/app.css';
 
 // @ts-expect-error TS(7016) FIXME
 import spiffModdleExtension from 'bpmn-js-spiffworkflow/app/spiffworkflow/moddle/spiffworkflow.json';
 
-// @ts-expect-error TS(7016) FIXME
 import KeyboardMoveModule from 'diagram-js/lib/navigation/keyboard-move';
-// @ts-expect-error TS(7016) FIXME
 import MoveCanvasModule from 'diagram-js/lib/navigation/movecanvas';
-// @ts-expect-error TS(7016) FIXME
 import ZoomScrollModule from 'diagram-js/lib/navigation/zoomscroll';
 
-// @ts-expect-error TS(7016) FIXME
 import TouchModule from 'diagram-js/lib/navigation/touch';
 
 import { useNavigate } from 'react-router-dom';
@@ -189,6 +182,7 @@ export default function ReactDiagramEditor({
           spiffworkflow,
           BpmnPropertiesPanelModule,
           BpmnPropertiesProviderModule,
+          TokenSimulationModelerModule,
         ],
         moddleExtensions: {
           spiffworkflow: spiffModdleExtension,
@@ -224,6 +218,7 @@ export default function ReactDiagramEditor({
           MoveCanvasModule,
           TouchModule,
           ZoomScrollModule,
+          TokenSimulationViewerModule
         ],
       });
     }

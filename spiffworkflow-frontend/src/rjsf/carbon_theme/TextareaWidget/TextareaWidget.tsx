@@ -51,7 +51,7 @@ function TextareaWidget<
     [id, onFocus]
   );
 
-  let labelToUse = label;
+  let labelToUse:any = label;
   if (uiSchema && uiSchema['ui:title']) {
     labelToUse = uiSchema['ui:title'];
   } else if (schema && schema.title) {
@@ -61,13 +61,13 @@ function TextareaWidget<
     labelToUse = `${labelToUse}*`;
   }
 
-  let helperText = null;
+  let helperText:any = null;
   if (uiSchema && uiSchema['ui:help']) {
     helperText = uiSchema['ui:help'];
   }
 
   let invalid = false;
-  let errorMessageForField = null;
+  let errorMessageForField:any = null;
   if (rawErrors && rawErrors.length > 0) {
     invalid = true;
     errorMessageForField = rawErrors[0];

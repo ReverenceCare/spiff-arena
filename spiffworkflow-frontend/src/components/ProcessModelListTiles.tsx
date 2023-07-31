@@ -70,7 +70,7 @@ export default function ProcessModelListTiles({
   };
 
   const processModelsDisplayArea = () => {
-    let displayText = null;
+    let displayText:any = null;
     if (processModels && processModels.length > 0) {
       displayText = (processModels || []).map((row: ProcessModel) => {
         return (

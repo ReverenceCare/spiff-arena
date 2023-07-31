@@ -237,7 +237,7 @@ export const makeid = (length: number) => {
 export const getProcessModelFullIdentifierFromSearchParams = (
   searchParams: any
 ) => {
-  let processModelFullIdentifier = null;
+  let processModelFullIdentifier:any = null;
   if (searchParams.get('process_model_identifier')) {
     processModelFullIdentifier = `${searchParams.get(
       'process_model_identifier'

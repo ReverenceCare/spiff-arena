@@ -75,7 +75,7 @@ export default function SecretList() {
 
   const SecretsDisplayArea = () => {
     const { page, perPage } = getPageInfoFromSearchParams(searchParams);
-    let displayText = null;
+    let displayText:any = null;
     if (secrets?.length > 0) {
       displayText = (
         <PaginationForTable

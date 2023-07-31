@@ -37,7 +37,7 @@ export default function TypeaheadWidget({
 
   let itemFormatSubstitutions: string[] | null = null;
   let invalid = false;
-  let errorMessageForField = null;
+  let errorMessageForField:any = null;
 
   if (itemFormat) {
     try {

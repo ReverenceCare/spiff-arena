@@ -74,7 +74,7 @@ export default function ProcessInstanceListSaveAsReport({
     handleSaveFormClose();
   };
 
-  let textInputComponent = null;
+  let textInputComponent:any = null;
   textInputComponent = (
     <TextInput
       id="identifier"

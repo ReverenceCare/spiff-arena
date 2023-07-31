@@ -230,7 +230,7 @@ export default function ProcessInstanceShow({ variant }: OwnProps) {
   const queryParams = () => {
     const processIdentifier = searchParams.get('process_identifier');
     const callActivityTaskId = searchParams.get('bpmn_process_guid');
-    const queryParamArray = [];
+    const queryParamArray:any = [];
     if (processIdentifier) {
       queryParamArray.push(`process_identifier=${processIdentifier}`);
     }
@@ -781,7 +781,7 @@ export default function ProcessInstanceShow({ variant }: OwnProps) {
   };
 
   const taskDisplayButtons = (task: Task) => {
-    const buttons = [];
+    const buttons: any = [];
     if (editingTaskData || addingPotentialOwners || selectingEvent) {
       return null;
     }
@@ -987,7 +987,7 @@ export default function ProcessInstanceShow({ variant }: OwnProps) {
   };
 
   const eventSelector = (candidateEvents: any) => {
-    let editor = null;
+    let editor:any = null;
     let className = 'modal-dropdown';
     if (eventTextEditorEnabled) {
       className = '';
@@ -1052,7 +1052,7 @@ export default function ProcessInstanceShow({ variant }: OwnProps) {
     const taskToUse: Task = { ...taskToDisplay, data: taskDataToDisplay };
 
     let primaryButtonText = 'Close';
-    let secondaryButtonText = null;
+    let secondaryButtonText:any = null;
     let onRequestSubmit = handleTaskDataDisplayClose;
     let onSecondarySubmit = handleTaskDataDisplayClose;
     let dangerous = false;
@@ -1125,7 +1125,7 @@ export default function ProcessInstanceShow({ variant }: OwnProps) {
     if (!processInstance) {
       return null;
     }
-    const elements = [];
+    const elements:any = [];
     if (ability.can('POST', `${targetUris.processInstanceTerminatePath}`)) {
       elements.push(terminateButton());
     }

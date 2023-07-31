@@ -50,7 +50,7 @@ export default function MessageInstanceList({ processInstanceId }: OwnProps) {
 
   const correlationsDisplayModal = () => {
     if (messageInstanceForModal) {
-      let failureCausePre = null;
+      let failureCausePre:any = null;
       if (messageInstanceForModal.failure_cause) {
         failureCausePre = (
           <>
@@ -82,8 +82,8 @@ export default function MessageInstanceList({ processInstanceId }: OwnProps) {
 
   const buildTable = () => {
     const rows = messageIntances.map((row: MessageInstance) => {
-      let errorIcon = null;
-      let errorTitle = null;
+      let errorIcon:any = null;
+      let errorTitle:any = null;
       if (row.failure_cause) {
         errorTitle = 'Instance has an error';
         errorIcon = (
@@ -154,7 +154,7 @@ export default function MessageInstanceList({ processInstanceId }: OwnProps) {
 
   if (pagination) {
     const { page, perPage } = getPageInfoFromSearchParams(searchParams);
-    let breadcrumbElement = null;
+    let breadcrumbElement:any = null;
     if (searchParams.get('process_instance_id')) {
       breadcrumbElement = (
         <ProcessBreadcrumb

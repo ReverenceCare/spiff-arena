@@ -27,7 +27,7 @@ export default function Filters({
   };
 
   if (filtersEnabled) {
-    let reportSearchSection = null;
+    let reportSearchSection:any = null;
     if (reportSearchComponent) {
       reportSearchSection = (
         <Column sm={3} md={7} lg={15}>

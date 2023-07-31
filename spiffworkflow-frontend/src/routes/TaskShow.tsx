@@ -138,7 +138,7 @@ export default function TaskShow() {
 
   const handleAutosaveFormSubmit = (formObject: any, event: any) => {
     const dataToSubmit = formObject?.formData;
-    let successCallback = null;
+    let successCallback:any = null;
     if (event.detail && 'successCallback' in event.detail) {
       successCallback = event.detail.successCallback;
     }
@@ -361,7 +361,7 @@ export default function TaskShow() {
 
     let formUiSchema;
     let jsonSchema = taskWithTaskData.form_schema;
-    let reactFragmentToHideSubmitButton = null;
+    let reactFragmentToHideSubmitButton:any = null;
     if (taskWithTaskData.typename === 'ManualTask') {
       jsonSchema = {
         type: 'object',
@@ -396,7 +396,7 @@ export default function TaskShow() {
 
     if (taskWithTaskData.state === 'READY') {
       let submitButtonText = 'Submit';
-      let closeButton = null;
+      let closeButton:any = null;
       if (taskWithTaskData.typename === 'ManualTask') {
         submitButtonText = 'Continue';
       } else if (taskWithTaskData.typename === 'UserTask') {
@@ -492,7 +492,7 @@ export default function TaskShow() {
     );
   };
 
-  const pageElements = [];
+  const pageElements:any = [];
   if (basicTask) {
     let statusString = '';
     if (basicTask.state !== 'READY') {
