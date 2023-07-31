@@ -33,6 +33,7 @@
     "bpmn-js": "^13.0.0",
     "bpmn-js-properties-panel": "^1.22.0",
     "bpmn-js-spiffworkflow": "github:sartography/bpmn-js-spiffworkflow#main",
+    "bpmn-js-token-simulation": "^0.31.1",
     "cookie": "^0.5.0",
     "craco": "^0.0.3",
     "cypress-slow-down": "^1.2.1",
