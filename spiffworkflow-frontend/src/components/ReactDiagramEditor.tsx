@@ -218,7 +218,7 @@ export default function ReactDiagramEditor({
           MoveCanvasModule,
           TouchModule,
           ZoomScrollModule,
-          TokenSimulationViewerModule
+          TokenSimulationViewerModule,
         ],
       });
     }

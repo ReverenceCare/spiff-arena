@@ -7,3 +7,5 @@ version_info.json
 .coverage*
 UNKNOWN.egg-info/
 process_models/
+spiffworkflow-backend/.DS_Store
+.DS_Store
