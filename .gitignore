@@ -8,3 +8,5 @@ version_info.json
 UNKNOWN.egg-info/
 process_models/
 .DS_Store
+node_modules
+```
