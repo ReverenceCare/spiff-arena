@@ -49,7 +49,7 @@ export default function ProcessGroupListTiles({
   };
 
   const processGroupsDisplayArea = () => {
-    let displayText = null;
+    let displayText:any = null;
     if (processGroups && processGroups.length > 0) {
       displayText = (processGroups || []).map((row: ProcessGroup) => {
         return (

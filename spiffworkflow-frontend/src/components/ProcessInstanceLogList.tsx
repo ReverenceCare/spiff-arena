@@ -247,7 +247,7 @@ export default function ProcessInstanceLogList({
   };
 
   const getTableRow = (logEntry: ProcessInstanceLogEntry) => {
-    const tableRow = [];
+    const tableRow:any = [];
     const taskNameCell = <td>{logEntry.task_definition_name}</td>;
     const bpmnProcessCell = (
       <td>
@@ -315,7 +315,7 @@ export default function ProcessInstanceLogList({
       }
     );
 
-    const tableHeaders = [];
+    const tableHeaders:any = [];
     if (isEventsView) {
       tableHeaders.push(
         <>
@@ -382,7 +382,7 @@ export default function ProcessInstanceLogList({
       return null;
     }
 
-    const filterElements = [];
+    const filterElements:any = [];
     let taskNameFilterPlaceholder = 'Choose a milestone';
     if (isEventsView) {
       taskNameFilterPlaceholder = 'Choose a task bpmn name';

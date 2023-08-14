@@ -12,8 +12,8 @@ declare global {
 
 let spiffEnvironment = '';
 let appRoutingStrategy = 'subdomain_based';
-let backendBaseUrl = null;
-let documentationUrl = null;
+let backendBaseUrl:any = null;
+let documentationUrl:any = null;
 if ('spiffworkflowFrontendJsenv' in window) {
   if ('APP_ROUTING_STRATEGY' in window.spiffworkflowFrontendJsenv) {
     appRoutingStrategy = window.spiffworkflowFrontendJsenv.APP_ROUTING_STRATEGY;

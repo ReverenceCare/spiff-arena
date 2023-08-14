@@ -77,13 +77,13 @@ export default function BaseInputTemplate<
     labelToUse = schema.title;
   }
 
-  let helperText = null;
+  let helperText:any = null;
   if (uiSchema && uiSchema['ui:help']) {
     helperText = uiSchema['ui:help'];
   }
 
   let invalid = false;
-  let errorMessageForField = null;
+  let errorMessageForField:any = null;
   if (rawErrors && rawErrors.length > 0) {
     invalid = true;
     if ('validationErrorMessage' in schema) {
@@ -93,7 +93,7 @@ export default function BaseInputTemplate<
     }
   }
 
-  let component = null;
+  let component:any = null;
   if (type === 'date') {
     // display the date in a date input box as the config wants.
     // it should in be y-m-d when it gets here.

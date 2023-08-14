@@ -58,7 +58,7 @@ export const errorForDisplayFromTestCaseErrorDetails = (
 };
 
 export const childrenForErrorObject = (errorObject: ErrorForDisplay) => {
-  let sentryLinkTag = null;
+  let sentryLinkTag:any = null;
   if (errorObject.sentry_link) {
     sentryLinkTag = (
       <span>
@@ -84,7 +84,7 @@ export const childrenForErrorObject = (errorObject: ErrorForDisplay) => {
     'Line Number'
   );
   const errorLine = errorDetailDisplay(errorObject, 'error_line', 'Context');
-  let codeTrace = null;
+  let codeTrace:any = null;
   if (errorObject.task_trace && errorObject.task_trace.length > 0) {
     codeTrace = (
       <div className="error_info">
@@ -122,7 +122,7 @@ export const childrenForErrorObject = (errorObject: ErrorForDisplay) => {
 export default function ErrorDisplay() {
   const errorObject = useAPIError().error;
   const { removeError } = useAPIError();
-  let errorTag = null;
+  let errorTag:any = null;
 
   if (errorObject) {
     const title = 'Error:';

@@ -140,7 +140,7 @@ export default function TaskListTable({
     ) {
       hasAccessToCompleteTask = true;
     }
-    const rowElements = [];
+    const rowElements:any = [];
     if (showProcessId) {
       rowElements.push(
         <td>
@@ -218,7 +218,7 @@ export default function TaskListTable({
   };
 
   const getTableHeaders = () => {
-    let tableHeaders = [];
+    let tableHeaders:any = [];
     if (showProcessId) {
       tableHeaders.push('Id');
     }

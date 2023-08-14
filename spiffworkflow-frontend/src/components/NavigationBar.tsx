@@ -136,7 +136,7 @@ export default function NavigationBar() {
     return activeKey === menuItemPath;
   };
 
-  let aboutLinkElement = null;
+  let aboutLinkElement:any = null;
 
   if (Object.keys(versionInfo).length) {
     aboutLinkElement = <a href="/about">About</a>;

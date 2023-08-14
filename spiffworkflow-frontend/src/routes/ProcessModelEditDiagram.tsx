@@ -581,7 +581,7 @@ export default function ProcessModelEditDiagram() {
       }
       let errorStringElement = <span>{errorObject}</span>;
 
-      let errorContextElement = null;
+      let errorContextElement:any = null;
 
       if (scriptUnitTestResult.context) {
         errorStringElement = (
@@ -643,7 +643,7 @@ export default function ProcessModelEditDiagram() {
         setCurrentScriptUnitTestIndex(-1);
       }
 
-      let scriptUnitTestResultBoolElement = null;
+      let scriptUnitTestResultBoolElement:any = null;
       if (scriptUnitTestResult) {
         scriptUnitTestResultBoolElement = (
           <>
@@ -890,7 +890,7 @@ export default function ProcessModelEditDiagram() {
   ): ProcessFile | null => {
     // Given a reference id (like a process_id, or decision_id) finds the file
     // that contains that reference and returns it.
-    let matchFile = null;
+    let matchFile:any = null;
     if (processModel) {
       const files = processModel.files.filter((f) => f.type === type);
       files.some((file) => {

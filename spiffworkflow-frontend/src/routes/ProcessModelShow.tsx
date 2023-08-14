@@ -244,7 +244,7 @@ export default function ProcessModelShow() {
     processModelFile: ProcessFile,
     isPrimaryBpmnFile: boolean
   ) => {
-    const elements = [];
+    const elements:any = [];
 
     // So there is a bug in here. Since we use a react context for error messages, and since
     // its provider wraps the entire app, child components will re-render when there is an
@@ -323,6 +323,7 @@ export default function ProcessModelShow() {
     }
     if (isTestCaseFile(processModelFile)) {
       elements.push(
+        // @ts-ignore
         <Can I="POST" a={targetUris.processModelTestsPath} ability={ability}>
           <ProcessModelTestRun
             processModelFile={processModelFile}
@@ -343,7 +344,7 @@ export default function ProcessModelShow() {
       const isPrimaryBpmnFile =
         processModelFile.name === processModel.primary_file_name;
 
-      let actionsTableCell = null;
+      let actionsTableCell:any = null;
       if (processModelFile.name.match(/\.(dmn|bpmn|json|md)$/)) {
         actionsTableCell = (
           <TableCell key={`${processModelFile.name}-cell`}>
@@ -352,7 +353,7 @@ export default function ProcessModelShow() {
         );
       }
 
-      let primarySuffix = null;
+      let primarySuffix:any = null;
       if (isPrimaryBpmnFile) {
         primarySuffix = (
           <span>
@@ -361,7 +362,7 @@ export default function ProcessModelShow() {
           </span>
         );
       }
-      let fileLink = null;
+      let fileLink:any = null;
       const fileUrl = profileModelFileEditUrl(processModelFile);
       if (fileUrl) {
         fileLink = <Link to={fileUrl}>{processModelFile.name}</Link>;

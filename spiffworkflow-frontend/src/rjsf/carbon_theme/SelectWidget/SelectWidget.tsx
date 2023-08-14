@@ -41,7 +41,7 @@ function SelectWidget({
   } else if (schema && schema.title) {
     labelToUse = schema.title;
   }
-  let helperText = null;
+  let helperText:any = null;
   if (uiSchema && uiSchema['ui:help']) {
     helperText = uiSchema['ui:help'];
   }
@@ -50,7 +50,7 @@ function SelectWidget({
   }
 
   let invalid = false;
-  let errorMessageForField = null;
+  let errorMessageForField:any = null;
   if (rawErrors && rawErrors.length > 0) {
     invalid = true;
     if ('validationErrorMessage' in schema) {

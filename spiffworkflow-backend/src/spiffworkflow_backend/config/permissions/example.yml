@@ -5,6 +5,11 @@ users:
     email: admin@spiffworkflow.org
     password: admin
     preferred_username: Admin
+  john:
+    service: local_open_id
+    email: john@spiffworkflow.org
+    password: john
+    preferred_username: John
   nelson:
     service: local_open_id
     email: nelson@spiffworkflow.org
@@ -15,18 +20,18 @@ users:
     email: malala@spiffworkflow.org
     password: malala
     preferred_username: Malala
-  oskar:
+  oscar:
     service: local_open_id
-    email: oskar@spiffworkflow.org
-    password: oskar
-    preferred_username: Oskar
+    email: oscar@spiffworkflow.org
+    password: oscar
+    preferred_username: Oscar
 
 
 groups:
   admin:
     users:
       [
-        admin@spiffworkflow.org,
+        john@spiffworkflow.org,
         nelson@spiffworkflow.org
       ]
   approvers:

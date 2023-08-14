@@ -42,7 +42,7 @@ export default function DateRangePickerWidget({
   rawErrors = [],
 }: widgetArgs) {
   let invalid = false;
-  let errorMessageForField = null;
+  let errorMessageForField:any = null;
 
   let labelToUse = label;
   if (uiSchema && uiSchema['ui:title']) {
@@ -88,8 +88,8 @@ export default function DateRangePickerWidget({
   let dateValue: (Date | null)[] | null = value;
   if (value) {
     const [startDateString, endDateString] = value.split(DATE_RANGE_DELIMITER);
-    let startDate = null;
-    let endDate = null;
+    let startDate:any = null;
+    let endDate:any = null;
     try {
       startDate = convertStringToDate(startDateString);
       // eslint-disable-next-line no-empty

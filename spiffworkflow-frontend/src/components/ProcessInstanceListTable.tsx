@@ -1042,7 +1042,7 @@ export default function ProcessInstanceListTable({
   const handleUpdateReportColumn = () => {
     if (reportColumnToOperateOn && reportMetadata) {
       const reportMetadataCopy = { ...reportMetadata };
-      let newReportColumns = null;
+      let newReportColumns:any = null;
       if (reportColumnFormMode === 'new') {
         newReportColumns = reportColumns().concat([reportColumnToOperateOn]);
       } else {
@@ -1084,7 +1084,7 @@ export default function ProcessInstanceListTable({
   };
 
   const updateReportColumn = (event: any) => {
-    let reportColumnForEditing = null;
+    let reportColumnForEditing:any = null;
     if (event.selectedItem) {
       reportColumnForEditing = reportColumnToReportColumnForEditing(
         event.selectedItem
@@ -1134,7 +1134,7 @@ export default function ProcessInstanceListTable({
     if (reportColumnFormMode === '') {
       return null;
     }
-    const formElements = [];
+    const formElements:any = [];
     if (reportColumnFormMode === 'new') {
       formElements.push(
         <ComboBox
@@ -1684,7 +1684,7 @@ export default function ProcessInstanceListTable({
         return formattedColumn(processInstance, column);
       });
       if (showActionsColumn) {
-        let buttonElement = null;
+        let buttonElement:any = null;
         const taskShowUrl = `/tasks/${processInstance.id}/${processInstance.task_id}`;
         const regex = new RegExp(`\\b(${preferredUsername}|${userEmail})\\b`);
         let hasAccessToCompleteTask = false;
@@ -1804,7 +1804,7 @@ export default function ProcessInstanceListTable({
     if (!showLinkToReport && !headerElement) {
       return null;
     }
-    let filterButtonLink = null;
+    let filterButtonLink:any = null;
     if (showLinkToReport && processInstances.length > 0) {
       filterButtonLink = (
         <Column
@@ -1836,7 +1836,7 @@ export default function ProcessInstanceListTable({
     );
   };
 
-  let resultsTable = null;
+  let resultsTable:any = null;
   if (pagination && (!textToShowIfEmpty || pagination.total > 0)) {
     // eslint-disable-next-line prefer-const
     let { page, perPage } = getPageInfoFromSearchParams(
@@ -1849,7 +1849,7 @@ export default function ProcessInstanceListTable({
       // eslint-disable-next-line prefer-destructuring
       perPage = perPageOptions[1];
     }
-    let refilterTextComponent = null;
+    let refilterTextComponent:any = null;
     if (requiresRefilter) {
       refilterTextComponent = (
         <p className="please-press-filter-button">
