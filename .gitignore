@@ -7,3 +7,6 @@ version_info.json
 .coverage*
 UNKNOWN.egg-info/
 process_models/
+.DS_Store
+node_modules
+```

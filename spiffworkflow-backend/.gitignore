@@ -2,7 +2,7 @@
 /.idea/
 /.coverage
 .coverage.*
-/.nox/
+/coverage.xml
 /.python-version
 /.pytype/
 /dist/
