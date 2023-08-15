@@ -424,7 +424,7 @@
     "enabled" : true,
     "totp" : false,
     "emailVerified" : false,
-    "email" : "admin@spiffworkflow.org",
+    "email" : "admin@reverencecare.com",
     "credentials" : [ {
       "id" : "644ff652-31d1-4349-9340-ce3b5fb76b5c",
       "type" : "password",

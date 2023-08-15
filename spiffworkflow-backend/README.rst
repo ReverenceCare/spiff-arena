@@ -15,8 +15,6 @@ Spiffworkflow Backend
    :target: https://github.com/psf/black
    :alt: Black
 
-
-
 Features
 --------
 
@@ -26,6 +24,22 @@ Features
 Running Locally
 ---------------
 
+* Add a folder called instance in the src folder
+* Add a config.py file in the src/instance folder.
+* Add the following settings to the config.py file:
+   FLASK_SESSION_SECRET_KEY = "Only the good die young"
+   SPIFFWORKFLOW_BACKEND_BPMN_SPEC_ABSOLUTE_DIR = '/the/full/path/to/your/demo-process-models'
+   SPIFFWORKFLOW_BACKEND_RUN_BACKGROUND_SCHEDULER = True
+   SPIFFWORKFLOW_BACKEND_OPEN_ID_SERVER_URL = 'http://localhost:7000/openid'
+   SPIFFWORKFLOW_BACKEND_PERMISSIONS_FILE_NAME = 'example.yml'
+   SPIFFWORKFLOW_BACKEND_LOG_LEVEL = "DEBUG"
+   SPIFFWORKFLOW_BACKEND_BACKGROUND_SCHEDULER_POLLING_INTERVAL_IN_SECONDS=50
+
+* After installing the poetry, you can start the backend with:
+.. code:: console
+
+   $ FLASK_ENV="local_development" poetry run flask run -p 7000
+   
 * Install libraries using poetry:
 
 .. code:: console
