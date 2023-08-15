@@ -1,7 +1,7 @@
 
 groups:
   admin:
-    users: [admin@spiffworkflow.org]
+    users: [admin@reverencecare.com]
   group1:
     users: [jason@sartography.com, kevin@sartography.com]
   group2:

@@ -57,6 +57,8 @@ const getUserEmail = () => {
   const idToken = getIdToken();
   if (idToken) {
     const idObject = jwt(idToken);
+    console.log(idObject)
+    console.log((idObject as any).email)
     return (idObject as any).email;
   }
   return null;
