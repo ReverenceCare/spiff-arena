@@ -14,9 +14,11 @@ RUN apk update && apk add --no-cache \
 
 WORKDIR /app
 
+RUN npm install -g webpack webpack-cli
+
 COPY package*.json ./
 
-RUN npm ci --only=production
+RUN npm install
 COPY . .
 EXPOSE 8080
 CMD [ "npm", "run", "start:example" ]
